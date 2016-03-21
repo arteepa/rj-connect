@@ -15,7 +15,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let request = NSURL(string: "http://localhost:4000/");
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        
+        let request = NSURL(string: "http://0.0.0.0:8080/");
         webView?.loadRequest(NSURLRequest(URL: request!))
         
     }
